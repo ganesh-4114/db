@@ -23,12 +23,12 @@ public class Insert {
 			}
 			Statement stmt=con.createStatement();  
 			PreparedStatement pstmt = con.prepareStatement("INSERT INTO IMGTABLE VALUES(?, ?)");
-//			pstmt.setString(1, "sample image");
-//			//Inserting Blob type
-//			FileInputStream in = new FileInputStream("C:\\Users\\ganeshcd\\Downloads\\curriculum 1.xlsx");
-//			pstmt.setBlob(2, in);  
-//			pstmt.execute(); 
-//			System.out.println(in+" records affected");  
+			pstmt.setString(1, "sample image");
+			//Inserting Blob type
+			FileInputStream in = new FileInputStream("C:\\Users\\ganeshcd\\Downloads\\curriculum 1.xlsx");
+			pstmt.setBlob(2, in);  
+			pstmt.execute(); 
+			System.out.println(in+" records affected");  
 			
 			FileReader read = new FileReader("C:\\Users\\ganeshcd\\Downloads\\TextReader.txt");
 			
@@ -41,7 +41,7 @@ public class Insert {
 			 
 			 BufferedReader br1 = new BufferedReader(new FileReader("C:\\Users\\ganeshcd\\Downloads\\curriculum 1.xlsx"));
 			 String st1;
-			 while ((st1 = br.readLine()) != null)
+			 while ((st1 = br1.readLine()) != null)
 				 
 		            // Print the string
 		            System.out.println(st1);
