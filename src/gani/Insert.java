@@ -39,7 +39,7 @@ public class Insert {
 		            // Print the string
 		            System.out.println(st);
 			 
-			 BufferedReader br1 = new BufferedReader(new FileReader("C:\\Users\\ganeshcd\\Downloads\\curriculum 1.xlsx"));
+			 BufferedReader br1 = new BufferedReader(new FileReader("C:\\Users\\ganeshcd\\Downloads\\dgc.csv"));
 			 String st1;
 			 while ((st1 = br1.readLine()) != null)
 				 
@@ -50,7 +50,8 @@ public class Insert {
 			 ResultSet rs=stmt.executeQuery("select * from IMGTABLE");  
 				while(rs.next())  
 				System.out.println(rs.getString(1)+ "  " +rs.getBlob(2));  
-			
+			br.close();
+			br1.close();
 			con.close();  
 			}catch (Exception e) {e.printStackTrace();}  
 			}  
